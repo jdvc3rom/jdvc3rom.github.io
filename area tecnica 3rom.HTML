@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Área Técnica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        /* Contenedor principal para todos los encabezados */
+        .header-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header-section h3 {
+            color: #555;
+            font-size: 1.5em; /* Tamaño para el encabezado superior */
+            margin-bottom: 10px; /* Espacio debajo de este encabezado */
+        }
+        .header-section .title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px; /* Espacio reducido para el título principal */
+        }
+        .header-section .title-container img {
+            height: 80px; /* Ajusta el tamaño de la imagen */
+            margin-right: 20px; /* Espacio entre la imagen y el título */
+        }
+        .header-section h1 {
+            color: #0056b3;
+            font-size: 3em; /* Letras grandes para el título principal */
+            margin: 0;
+        }
+        .header-section p {
+            color: #666;
+            font-size: 1.2em; /* Tamaño para el año lectivo */
+            margin-top: 10px; /* Espacio encima de este texto */
+        }
+
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .trimestre-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            min-height: 150px;
+            position: relative;
+        }
+        .trimestre-box h2 {
+            color: #007bff;
+            margin-top: 0;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        .trimestre-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .trimestre-box:hover ul {
+            display: block;
+            opacity: 1;
+        }
+        .trimestre-box ul li {
+            background-color: #e9ecef;
+            margin-bottom: 8px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            color: #555;
+            cursor: pointer;
+        }
+        .trimestre-box ul li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Contenido del módulo Diseño Web (oculto por defecto) */
+        #disenoWebContent {
+            background-color: #e0f7fa;
+            border: 1px solid #b2ebf2;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            display: none; /* Oculto por defecto */
+        }
+        #disenoWebContent h2 {
+            color: #00796b;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #disenoWebContent h3 {
+            color: #0097a7;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+        #disenoWebContent p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .close-button {
+            display: block;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .close-button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-section">
+        <h3>Unidad Educativa Nicolás Infante Díaz</h3>
+        <div class="title-container">
+            <img src="https://media.licdn.com/dms/image/v2/C4E0BAQFy7pf5Ts4cUg/company-logo_200_200/company-logo_200_200/0/1630628674903?e=2147483647&v=beta&t=c5SKStarLuofGPE7kqmuIPRwRHQvwQ75Dxh7zCKdpdA" alt="Logo de Área Técnica">
+            <h1>PROYECTO DE ÁREA TÉCNICA</h1>
+        </div>
+        <p>Año Lectivo 2025-2026</p>
+    </div>
+
+    <div class="menu-container">
+        <div class="trimestre-box">
+            <h2>1er Trimestre</h2>
+            <ul>
+                <li>Programación</li>
+                <li>Ofimáticas en Línea</li>
+                <li onclick="toggleDisenoWebContent()">Diseño Web</li>
+                <li>Sistemas Operativos</li>
+            </ul>
+        </div>
+
+        <div class="trimestre-box">
+            <h2>2do Trimestre</h2>
+            <ul>
+                <li>Programación</li>
+                <li>Ofimáticas en Línea</li>
+                <li>Diseño Web</li>
+                <li>Sistemas Operativos</li>
+            </ul>
+        </div>
+
+        <div class="trimestre-box">
+            <h2>3er Trimestre</h2>
+            <ul>
+                <li>Programación</li>
+                <li>Ofimáticas en Línea</li>
+                <li>Diseño Web</li>
+                <li>Sistemas Operativos</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="disenoWebContent">
+        <h2>Módulo: Diseño Web</h2>
+
+        <h3>Temas de Hosting</h3>
+        <p>
+            El hosting web es un servicio que permite almacenar los archivos de un sitio web en un servidor para que pueda ser accesible desde cualquier lugar con conexión a internet. Es esencial para que tu página web esté en línea. Hay varios tipos de hosting, como compartido, VPS (Servidor Privado Virtual), dedicado y en la nube, cada uno con sus propias ventajas y desventajas según las necesidades del proyecto. Se debe considerar el espacio en disco, el ancho de banda, la seguridad y el soporte técnico al elegir un proveedor.
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuOBDgLCf-PiFjHJ6thoRkJupuFlve-uwLzA&s">
+        </p>
+
+        <h3>Temas de GitHub</h3>
+        <p>
+            GitHub es una plataforma de desarrollo colaborativo que utiliza el sistema de control de versiones Git. Permite a múltiples desarrolladores trabajar en el mismo proyecto de forma simultánea sin sobrescribir el trabajo de los demás. Es fundamental para el control de versiones de proyectos de diseño y desarrollo web. Puedes subir tus archivos HTML, CSS y JavaScript, gestionar cambios, colaborar con otros y desplegar proyectos directamente desde repositorios. Es una herramienta clave para portfolios y proyectos en equipo.
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9d/c9/09/9dc9098e-0e6c-2444-d99e-872630b8b185/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/1200x600wa.png" style="max-width: 500px; height: 200px; margin: 0px; width: 345px;">
+
+        </p>
+        <button class="close-button" onclick="toggleDisenoWebContent()">Cerrar</button>
+    </div>
+
+    <script>
+        // Función JavaScript para mostrar/ocultar el contenido
+        function toggleDisenoWebContent() {
+            var content = document.getElementById('disenoWebContent');
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block'; // Muestra el contenido
+            } else {
+                content.style.display = 'none'; // Oculta el contenido
+            }
+        }
+    </script>
+
+</body>
+</html>
